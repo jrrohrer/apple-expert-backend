@@ -5,10 +5,31 @@ class Api::V1::ApplesController < ApplicationController
     render json: apples
   end
 
+  def create
+    apple = Apple.new(apple_params)
+    if apple.save
+      render json: apple, status: accepted
+    else
+      render json: {errors: apple.errors.full_messages}, status: :unprocessible_entity
+    end
+  end
+
+  def edit
+
+  end
+
+  def update
+
+  end
+
+  def destroy
+
+  end
+
   private
 
   def apple_params
-    params.require(:apple).permit(:variety, :harvest, :notes, :image_url, :categories)
+    params.require(:apple).permit(:variety, :harvest, :notes, :image_url, :category_ids)
   end
 
 end
