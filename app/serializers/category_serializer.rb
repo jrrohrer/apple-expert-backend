@@ -1,4 +1,4 @@
 class CategorySerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :name, :apples
 end

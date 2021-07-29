@@ -2,12 +2,7 @@ class Api::V1::ApplesController < ApplicationController
 
   def index
     apples = Apple.all
-    
-    options = {
-      exclude: [:created_at, :updated_at]
-    }
-
-    render json: AppleSerializer.new(apples, options)
+    render json: AppleSerializer.new(apples)
   end
 
   def create
