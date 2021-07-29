@@ -30,3 +30,7 @@ This is the repo for the Rails API backend portion of this SPA. Database used is
 * A user will be able to add apples to the database with a form
 * A user will be able to edit apples
 * A user will be able to delete apples
+
+## Helpful Notes
+
+There is a lot of data, and some of the apple objects have notes that are several sentences long. In order to make your AR queries in the console easier to read, I recommend installing the Hirb gem, which will display your results in a neat table. Check out <a href="https://s-rogers0715.medium.com/hirb-a-ruby-gem-you-dont-want-to-be-without-61c054df34c6">this blog post</a> for more info on installing and using Hirb.
