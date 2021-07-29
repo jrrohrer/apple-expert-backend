@@ -10,12 +10,15 @@ This is the repo for the Rails API backend portion of this SPA. Database used is
 ## Configuration
 
 * Database creation
+
   `rails db:create`
 
 * Database initialization
+ 
   `rails db:migrate`
   
 * Don't forget the seed data! The database is seeded with the apple categories as well as the 10 most commonly found apple varieties.
+
   `rails db:seed`
 
 ## User Stories
