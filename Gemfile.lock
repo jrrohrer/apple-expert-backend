@@ -67,9 +67,12 @@ GEM
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     erubi (1.10.0)
+    fast_jsonapi (1.5)
+      activesupport (>= 4.2)
     ffi (1.15.3)
     globalid (0.5.1)
       activesupport (>= 5.0)
+    hirb (0.7.3)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     listen (3.6.0)
@@ -149,6 +152,8 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
+  fast_jsonapi
+  hirb
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
