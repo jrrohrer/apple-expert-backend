@@ -54,7 +54,7 @@
   * Build relevant routes for MVP (ex: index and create)
   * Visit `http://localhost:3000/api/v1/<your_resource_name>` to see JSON data
 
-[] 3. Fast JSON API Serializer
+[x] 3. Fast JSON API Serializer
   * Add `gem 'fast_jsonapi'` to your Gemfile and run `bundle install`
   * Create serializer classes:
     * `rails g serializer <your_resource_name>`
@@ -85,6 +85,6 @@
   * Adding Relationships
     * To control the attributes displayed in the association
 
-[] 4. TEST: Confirm data at your Rails endpoints!
+[x] 4. TEST: Confirm data at your Rails endpoints!
 
-[] 5. Build out your associated models using this same process. Remember: Focus on building vertically!
+[x] 5. Build out your associated models using this same process. Remember: Focus on building vertically!

@@ -1,8 +1,10 @@
 class Api::V1::ApplesController < ApplicationController
 
   def index
-    apples = Apple.all
-    render json: AppleSerializer.new(apples)
+    # because I am using a get request to get only apples from the user's requested category, I am sending the category ID back to the controller as a query param. The category variable saves the query param and passes it to an activerecord query method (see bottom of controller) that returns all the Apple instances that match the query. 
+    category = params[:category_id].to_i
+    get_apples_by_category(category)
+    render json: AppleSerializer.new(@apples)
   end
 
   def create
@@ -30,6 +32,10 @@ class Api::V1::ApplesController < ApplicationController
 
   def apple_params
     params.require(:apple).permit(:variety, :harvest, :notes, :image_url, :category_ids)
+  end
+
+  def get_apples_by_category(category)
+    @apples = Apple.joins(:apples_categories).where(apples_categories: { category_id: category })
   end
 
 end
