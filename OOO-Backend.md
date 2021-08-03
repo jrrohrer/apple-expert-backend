@@ -88,3 +88,23 @@
 [x] 4. TEST: Confirm data at your Rails endpoints!
 
 [x] 5. Build out your associated models using this same process. Remember: Focus on building vertically!
+
+
+Apple Params needs data like this:
+
+{
+  "variety" : "Name",
+  "harvest" : "Month", 
+  "notes" : "String", 
+  image_url: "url/string",
+  "categories_attributes" : {
+    "id" : 26
+    },
+    {
+    "id" : 27
+    },
+    { 
+    "id" : 29
+    }
+  }
+}
