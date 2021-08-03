@@ -8,9 +8,10 @@ class Api::V1::ApplesController < ApplicationController
   end
 
   def create
-    apple = Apple.new(apple_params)
+    apple = Apple.create(apple_params)
+    # apple.categories = apple_params[:category_ids]
     if apple.save
-      render json: apple, status: accepted
+      render json: AppleSerializer.new(apple)
     else
       render json: {errors: apple.errors.full_messages}, status: :unprocessible_entity
     end
@@ -31,7 +32,7 @@ class Api::V1::ApplesController < ApplicationController
   private
 
   def apple_params
-    params.require(:apple).permit(:variety, :harvest, :notes, :image_url, :category_ids)
+    params.require(:apple).permit(:variety, :harvest, :notes, :image_url, categories_attributes: [:id, :name])
   end
 
   def get_apples_by_category(category)
