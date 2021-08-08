@@ -8,7 +8,6 @@ class Api::V1::ApplesController < ApplicationController
   end
 
   def create
-    byebug
     apple = Apple.create(apple_params)
     # apple.category_ids = params[:category_ids]
     if apple.save
