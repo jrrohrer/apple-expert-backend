@@ -26,7 +26,7 @@ class Api::V1::ApplesController < ApplicationController
   def destroy
     apple = Apple.find_by_id(params[:id])
     apple.destroy
-    render json: {message: "Successfully deleted ${apple.name}." }
+    render json: {message: "Successfully deleted #{apple.name}." }
   end
 
   private
