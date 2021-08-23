@@ -4,7 +4,8 @@ class Api::V1::ApplesController < ApplicationController
     # because I am using a get request to get only apples from the user's requested category, I am sending the category ID back to the controller as a query param. The category variable saves the query param and passes it to an activerecord query method (see bottom of controller) that returns all the Apple instances that match the query. 
     category = params[:category_id].to_i
     @apples = get_apples_by_category(category)
-    render json: AppleSerializer.new(@apples)
+    sorted_apples = @apples.order(:variety)
+    render json: AppleSerializer.new(sorted_apples)
   end
 
   def create
