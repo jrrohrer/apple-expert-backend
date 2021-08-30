@@ -2,7 +2,7 @@
 
 Welcome to Apple Expert! The goal of this application is to allow users to choose a category of apples (table apples, cooking apples, sauce apples, pie apples, juice apples, or butter apples) when deciding what kind of apples to purchase from a local fruit seller.
 
-This is the repo for the Rails API backend portion of this SPA. Database used is PostgreSQL.
+This is the repo for the Rails API backend portion of this SPA. Database used is PostgreSQL. The frontend repo can be found here: <a href="https://github.com/jrrohrer/apple-expert-frontend">Apple Expert Frontend</a>
 
 * Ruby version: 2.6.3
 * Rails version: 6.1.4
