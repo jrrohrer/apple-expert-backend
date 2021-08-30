@@ -16,14 +16,6 @@ class Api::V1::ApplesController < ApplicationController
     end
   end
 
-  def edit
-
-  end
-
-  def update
-
-  end
-
   def destroy
     apple = Apple.find_by_id(params[:id])
     apple.destroy
